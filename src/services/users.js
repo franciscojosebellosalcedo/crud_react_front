@@ -9,7 +9,6 @@ export const getFilePdfUsersRequest=async (body)=>{
         body:JSON.stringify({data:body})
     });
     const nameFile=request.headers.get("NameFile");
-    console.log(nameFile)
     return [await request.blob(),nameFile];
 }
 

@@ -25,6 +25,21 @@ const MenuVertical = () => {
         window.URL.revokeObjectURL(url);
     }
 
+    const dowloadExcel = (response) => {
+        const blob = response[0];
+        blob.name = response[1];
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Registros__"+Date.now()+".xlsx";
+        a.style.display = "none";
+
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
+
     const deleteAllUsers = async () => {
         try {
             setOpenOption(false);
@@ -103,7 +118,7 @@ const MenuVertical = () => {
                 <div className={`options ${openOption === true ? 'see__options' : ''}`}>
                     <h3 className="option__title">Exportar archivo</h3>
                     <div>
-                        {/* <button type="button" className="btn__operation__option btn__excel" onClick={(e) => getFileExcel(e)}>Excel</button> */}
+                        <button type="button" className="btn__operation__option btn__excel" onClick={(e) => getFileExcel(e)}>Excel</button>
                         <button type="button" className="btn__operation__option btn__pdf" onClick={(e) => getFilePdf(e)}>Pdf</button>
                     </div>
                     <h3 className="option__title">Avanzado</h3>
