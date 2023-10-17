@@ -19,7 +19,7 @@ const Main = () => {
     try {
       const responseRequest = await getAllUsersRequest();
       if (responseRequest.response) {
-        setUsers([...responseRequest.data.reverse()]);
+        setUsers([...responseRequest.data]);
         seIsLoader(false);
       } else {
         toast.error("Error al cargar los usuarios");
