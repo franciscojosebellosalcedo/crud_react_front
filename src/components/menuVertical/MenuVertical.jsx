@@ -102,7 +102,7 @@ const MenuVertical = () => {
                 toast.error("No hay registros");
             } else {
                 const response = await getFileExcelUsersRequest(bodyFileExcel);
-                dowload(response);
+                dowloadExcel(response);
                 toast.success("Archivo exel generado correctamente, revise sus archivos");
             }
             setOpenOption(false);
