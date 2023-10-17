@@ -36,7 +36,7 @@ const Filter = () => {
         toast.error("No se encotraron registros");
         setDataFilterUsers([]);
       }else{
-        setDataFilterUsers([...responseData.data]);
+        setDataFilterUsers([...responseData.data.reverse()]);
       }
       seIsLoader(false);
     } catch (error) {
