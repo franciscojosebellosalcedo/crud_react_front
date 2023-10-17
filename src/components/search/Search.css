@@ -1,0 +1,15 @@
+.form__search{
+    flex-basis: 90%;
+}
+.input__search{
+    padding-left:10px ;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 50%;
+}
+.icon__search{
+    font-size: 18px;
+    padding-right: 10px;
+    cursor: pointer;
+}

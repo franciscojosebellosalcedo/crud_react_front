@@ -1,0 +1,66 @@
+.menu{
+    position: relative;
+}
+.icon__menu{
+    font-size: 25px;
+    cursor: pointer;
+}
+.options{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    background-color: white;
+    width: 200px;
+    height: max-content;
+    z-index: 100;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.067);
+}
+
+.options > .option__title{
+    font-size: 16px;
+    color:rgba(0, 0, 0, 0.78);
+    text-align: center;
+}
+.see__options{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.options button{
+    height: 30px;
+    cursor: pointer;
+}
+.options > div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.btn__excel{
+    background-color: rgba(10, 173, 10, 0.781);
+}
+.btn__pdf{
+    background-color: rgba(189, 137, 40, 0.657);
+}
+
+.icon__file{
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn__delete__all{
+    background-color: red;
+}
+.btn__operation__option{
+    border-radius: 8px;
+    color: white;
+}
