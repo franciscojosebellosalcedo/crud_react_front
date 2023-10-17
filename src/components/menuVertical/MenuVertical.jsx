@@ -31,7 +31,7 @@ const MenuVertical = () => {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "Registros__"+Date.now()+".xlsx";
+        a.download = "Registros__"+Date.now()+"_.xlsx";
         a.style.display = "none";
 
         document.body.appendChild(a);
