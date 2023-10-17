@@ -103,11 +103,11 @@ const MenuVertical = () => {
                 <div className={`options ${openOption === true ? 'see__options' : ''}`}>
                     <h3 className="option__title">Exportar archivo</h3>
                     <div>
-                        <button className="btn__operation__option btn__excel" onClick={(e) => getFileExcel(e)}>Excel</button>
-                        <button className="btn__operation__option btn__pdf" onClick={(e) => getFilePdf(e)}>Pdf</button>
+                        <button type="button" className="btn__operation__option btn__excel" onClick={(e) => getFileExcel(e)}>Excel</button>
+                        <button type="button" className="btn__operation__option btn__pdf" onClick={(e) => getFilePdf(e)}>Pdf</button>
                     </div>
                     <h3 className="option__title">Avanzado</h3>
-                    <button className="btn__operation__option btn__delete__all" onClick={() => deleteAllUsers()}>Eliminar todo</button>
+                    <button type="button" className="btn__operation__option btn__delete__all" onClick={() => deleteAllUsers()}>Eliminar todo</button>
                 </div>
             </section>
         </>

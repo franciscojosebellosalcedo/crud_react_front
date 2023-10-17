@@ -8,7 +8,7 @@ import "./Main.css";
 import { Toaster, toast } from 'sonner'
 import { useContextUser } from "../../context/ProviderContextApp";
 import { getAllUsersRequest } from "../../services/users";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -39,9 +39,9 @@ const Main = () => {
       <h1 className="main__title">Lista de registros</h1>
       <button className="btn btn__add" onClick={() => navigate("/nuevo-registro")}>Agregar</button>
 
+      <Filter isLoader={isLoader} seIsLoader={seIsLoader}/>
       {isLoader === false ?
         <>
-          <Filter isLoader={isLoader} seIsLoader={seIsLoader}/>
           <div className="conatiner__oprations">
             <MenuVertical />
             <Search />

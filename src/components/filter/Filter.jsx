@@ -34,6 +34,7 @@ const Filter = () => {
         toast.error(responseData.message);
       }else if(responseData.data.length===0){
         toast.error("No se encotraron registros");
+        setDataFilterUsers([]);
       }else{
         setDataFilterUsers([...responseData.data]);
       }
@@ -174,7 +175,7 @@ const Filter = () => {
             <input className="input__value" value={valueInput} type="text" placeholder="Valor" onInput={(e) => handlerInput(e)} />
           </form>
 
-          {seeBtn === true ? <button className="btn btn__filter" onClick={(e) => filterUsers(e)}>Filtrar</button> : ""}
+          {seeBtn === true ? <button type="button" className="btn btn__filter" onClick={(e) => filterUsers(e)}>Filtrar</button> : ""}
 
         </div>
 
