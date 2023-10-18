@@ -8,8 +8,7 @@ export const getFilePdfUsersRequest=async (body)=>{
         headers,
         body:JSON.stringify({data:body})
     });
-    const nameFile=request.headers.get("NameFile");
-    return [await request.blob(),nameFile];
+    return await request.blob();
 }
 
 export const getFileExcelUsersRequest=async (body)=>{
@@ -18,8 +17,7 @@ export const getFileExcelUsersRequest=async (body)=>{
         headers,
         body:JSON.stringify({data:body})
     });
-    const nameFile=request.headers.get("NameFile");
-    return [await request.blob(),nameFile];
+    return await request.blob();
 }
 
 export const updateUserRequest=async (id,body)=>{

@@ -11,12 +11,11 @@ const MenuVertical = () => {
     const { setUsers } = useContextUser();
 
     const dowload = (response) => {
-        const blob = response[0];
-        blob.name = response[1];
+        const blob = response;
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = blob.name;
+        a.download = "Registros__"+Date.now()+"_.pdf";
         a.style.display = "none";
 
         document.body.appendChild(a);
@@ -26,8 +25,7 @@ const MenuVertical = () => {
     }
 
     const dowloadExcel = (response) => {
-        const blob = response[0];
-        blob.name = response[1];
+        const blob = response;
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
