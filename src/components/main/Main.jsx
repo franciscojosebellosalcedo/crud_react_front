@@ -36,7 +36,7 @@ const Main = () => {
   return (
     <div className="main">
       <Toaster closeButton expand={false} position="top-center" richColors />
-      <h1 className="main__title">Lista de registros de personas</h1>
+      <h1 className="main__title">Lista de personas registradas</h1>
       <button className="btn btn__add" onClick={() => navigate("/nuevo-registro")}>Agregar</button>
 
       <Filter isLoader={isLoader} seIsLoader={seIsLoader}/>
