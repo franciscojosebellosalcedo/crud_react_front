@@ -17,6 +17,7 @@ const Table = () => {
     }
 
     const deleteUser = (id, namecomplete) => {
+        console.log(id)
         try {
             if (!open) {
                 toast(`¿ Desea eliminar a ${namecomplete} ?`, {
@@ -69,7 +70,7 @@ const Table = () => {
                             <>
                                 {
                                     dataFilterUsers.reverse().map((item) => (
-                                        <tr key={item.id}>
+                                        <tr key={item._id}>
                                             <td data-title="Nombres" >{item.name}</td>
                                             <td data-title="Apellidos">{item.lastName}</td>
                                             <td data-title="Sexo">{item.sexo}</td>
@@ -78,7 +79,7 @@ const Table = () => {
                                             <td data-title="Fecha">{item.createdAt}</td>
                                             <td>
                                                 <i className="uil uil-pen icon__edit icon" onClick={()=>selectUser(item)}></i>
-                                                <i className="uil uil-trash-alt icon__delete icon" onClick={() => deleteUser(item.id, item.name + " " + item.lastName)}></i>
+                                                <i className="uil uil-trash-alt icon__delete icon" onClick={() => deleteUser(item._id, item.name + " " + item.lastName)}></i>
                                             </td>
                                         </tr>
                                     ))
@@ -87,7 +88,7 @@ const Table = () => {
                             : <>
                                 {
                                     users.reverse().map((item) => (
-                                        <tr key={item.id}>
+                                        <tr key={item._id}>
                                             <td data-title="Nombres" >{item.name}</td>
                                             <td data-title="Apellidos">{item.lastName}</td>
                                             <td data-title="Sexo">{item.sexo}</td>
@@ -96,7 +97,7 @@ const Table = () => {
                                             <td data-title="Fecha">{item.createdAt}</td>
                                             <td>
                                                 <i className="uil uil-pen icon__edit icon"  onClick={()=>selectUser(item)}></i>
-                                                <i className="uil uil-trash-alt icon__delete icon" onClick={() => deleteUser(item.id, item.name + " " + item.lastName)}></i>
+                                                <i className="uil uil-trash-alt icon__delete icon" onClick={() => deleteUser(item._id, item.name + " " + item.lastName)}></i>
                                             </td>
                                         </tr>
                                     ))

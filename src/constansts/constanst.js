@@ -8,9 +8,9 @@ export const fieldsFilter=[
 ];
 
 export const conditionals=[
-    {keyValue:"Mayor a",value:">"},
-    {keyValue:"Menor a",value:"<"},
-    {keyValue:"Igual a",value:"="},
+    {keyValue:"Mayor a",value:"$gt"},
+    {keyValue:"Menor a",value:"$lt"},
+    {keyValue:"Igual a",value:"$eq"},
     {keyValue:"Ninguno",value:"none"}
 ];
 

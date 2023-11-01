@@ -9,7 +9,7 @@ const EditRegister = () => {
     const [openListSexo, setOpenListSexo] = useState(false);
     const [valueSelectSexo, setValueSelectSexo] = useState(null);
     const [labelSelectSexo, setLabelSelectSexo] = useState(null);
-    const [newData,setNewData]=useState({id:"",name:"",lastName:"",city:"",sexo:"",age:"",createdAt:"",updatedAt:""});
+    const [newData,setNewData]=useState({_id:"",name:"",lastName:"",city:"",sexo:"",age:"",createdAt:"",updatedAt:""});
 
     const navigate=useNavigate();
 
@@ -42,8 +42,8 @@ const EditRegister = () => {
     const updateUser = async (e) => {
         e.preventDefault();
         try {
-            const {createdAt,updatedAt, id, ...newDataUser}=newData;
-            const responseData=await updateUserRequest(parseInt(userSelected?.id),newDataUser);
+            const {createdAt,updatedAt, _id, ...newDataUser}=newData;
+            const responseData=await updateUserRequest(userSelected?._id,newDataUser);
             if(responseData.response){
                 toast.success(responseData.message);
             }else{
