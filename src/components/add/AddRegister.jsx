@@ -47,7 +47,8 @@ const AddRegister = () => {
             const responseDataRequest = await createUserRequest(newRegister);
             if (responseDataRequest.response) {
                 toast.success(responseDataRequest.message);
-                setNewRegister({ name: "", lastName: "", sexo: "", city: "", age: "" })
+                setNewRegister({ name: "", lastName: "", sexo: "", city: "", age: "" });
+                setValueSelectSexo(null)
             } else {
                 toast.error("Error al crear el registro");
             }
